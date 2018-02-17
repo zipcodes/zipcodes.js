@@ -16,7 +16,36 @@ getZipCode('US', '90210', function (result) {
     console.log(result);
 });
 ```
- 
+
+Output:
+
+```
+{
+    "input":{
+        "country": "US",
+        "zip": "90210"
+    },
+    "lookup":{
+        "countryCode": "US",
+        "postalCode": "90210",
+        "placeName": "Beverly Hills",
+        "adminName1": "California",
+        "adminCode1": "CA",
+        "adminName2": "Los Angeles",
+        "adminCode2": "037",
+        "adminName3": "",
+        "adminCode3": "",
+        "latitude": "34.0901",
+        "longitude": "-118.4065",
+        "accuracy": "4"
+    },
+    "pattern": /^\d{5}(-\d{4})?$/,
+    "validPattern": true,
+    "validLookup": true,
+    "valid": true
+}
+```
+
 ## Supported Countries
 
 Country codes should follow [ISO 3166-1 alpha-2](https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2)
