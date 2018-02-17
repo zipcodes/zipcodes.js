@@ -1,9 +1,9 @@
 <?php
-
+/**
+ * Generate folders and repos for each country to each serve as a database.
+ */
 error_reporting(E_ALL);
 ini_set('display_errors', '1');
-
-//die(minPostal('FR 54311 CEDEX', 'FR'));
 
 $cwd = dirname(realpath(__FILE__));
 $zipfile = $cwd.'/allCountries.zip';
@@ -34,8 +34,8 @@ if (!file_exists($txtfile)) {
     }
 }
 
-// echo "Cleaning up from previous build...\n";
-// clean($cwd);
+echo "Cleaning up from previous build...\n";
+clean($cwd);
 
 $row = 0;
 $headers = [
@@ -156,9 +156,8 @@ if ($regenKey) {
         $cwd.'/key.js',
         'var key = '.json_encode($key).';'
     );
+    die(var_export($key, true));
 }
-
-die(var_export($key, true));
 
 /**
  * Recursively delete files within a directory based on type.
@@ -170,7 +169,7 @@ function clean($dir, $types = ['json', 'jsonp'])
     if (is_dir($dir)) {
         $objects = scandir($dir);
         foreach ($objects as $object) {
-            if ($object != "." && $object != "..") {
+            if ($object != "." && $object != ".." && $object != "key.json") {
                 if (is_dir($dir."/".$object)) {
                     clean($dir."/".$object, $types);
                 } else {
