@@ -1,5 +1,5 @@
-zip-codes-database-FREE.csv
 *.json
 *.jsonp
 **
+!README.md
 !zipcodes.js
