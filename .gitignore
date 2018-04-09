@@ -1,5 +1,6 @@
 *.json
 *.jsonp
 **
+!icon.png
 !README.md
 !zipcodes.js
