@@ -1,3 +1,4 @@
+![](https://avatars2.githubusercontent.com/u/35705465?s=26&v=4)
 zipcodes.js
 ===========
 
@@ -10,6 +11,8 @@ Free postal code validation for the web.
 
 
 ## Usage
+
+`<script src="https://cdn.jsdelivr.net/gh/zipcodes/zipcodes.js@1.0/zipcodes.min.js"></script>`
 
 ```
 getZipCode('US', '90210', function (result) {
@@ -301,3 +304,8 @@ Country codes should follow [ISO 3166-1 alpha-2](https://en.wikipedia.org/wiki/I
 | <img src="https://flags.zipcodes.gdn/png/256/ZA.png" height="12" width="23"> | ZA   | South Africa                                 | ✓     | ✓      |
 | <img src="https://flags.zipcodes.gdn/png/256/ZM.png" height="12" width="23"> | ZM   | Zambia                                       | ✓     | ✖      |
 | <img src="https://flags.zipcodes.gdn/png/256/ZW.png" height="12" width="23"> | ZW   | Zimbabwe                                     | ✖     | ✖      |
+
+# Sources
+
+- Some patterns borrowed from https://github.com/sarcadass/i18n-zipcodes
+- Zipcode database from http://download.geonames.org
