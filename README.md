@@ -127,7 +127,7 @@ Country codes should follow [ISO 3166-1 alpha-2](https://en.wikipedia.org/wiki/I
 | <img src="https://flags.zipcodes.gdn/png/256/FI.png" height="12" width="23"> | FI   | Finland                                      | ✓     | ✓      |
 | <img src="https://flags.zipcodes.gdn/png/256/FJ.png" height="12" width="23"> | FJ   | Fiji                                         | ✖     | ✖      |
 | <img src="https://flags.zipcodes.gdn/png/256/FK.png" height="12" width="23"> | FK   | Falkland Islands                             | ✖     | ✖      |
-| <img src="https://flags.zipcodes.gdn/png/256/FM.png" height="12" width="23"> | FM   | Federated States of Micronesia               | ✓     | ✖      |
+| <img src="https://flags.zipcodes.gdn/png/256/FM.png" height="12" width="23"> | FM   | Federated States of Micronesia               | ✓     | ✓      |
 | <img src="https://flags.zipcodes.gdn/png/256/FO.png" height="12" width="23"> | FO   | Faroe Islands                                | ✓     | ✓      |
 | <img src="https://flags.zipcodes.gdn/png/256/FR.png" height="12" width="23"> | FR   | France                                       | ✓     | ✓      |
 | <img src="https://flags.zipcodes.gdn/png/256/GA.png" height="12" width="23"> | GA   | Gabon                                        | ✖     | ✖      |
