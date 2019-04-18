@@ -8,7 +8,7 @@
  *   });
  *
  */
-var getZipCode = function (country, zip, callback) {
+const getZipCode = function (country, zip, callback) {
     var keys = {
             AD: 0,
             AR: 2,
@@ -193,3 +193,5 @@ var getZipCode = function (country, zip, callback) {
         }
     }
 };
+
+module.exports = getZipCode

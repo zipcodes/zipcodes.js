@@ -1,0 +1,12 @@
+{
+  "name": "zipcodes.js",
+  "version": "1.0.0",
+  "description": "Free postal code validation for the web.",
+  "main": "index.js",
+  "repository": "https://github.com/zipcodes/zipcodes.js",
+  "author": "Heath Dutton <heathdutton@gmail.com>",
+  "license": "GNU General Public License v3.0",
+  "scripts": {
+    "build": "rollup -c --environment INCLUDE_DEPS,BUILD:production"
+  }
+}

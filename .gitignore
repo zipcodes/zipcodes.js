@@ -1,6 +1,7 @@
-*.json
-*.jsonp
-**
-!icon.png
-!README.md
-!zipcodes.js
+.env
+.DS_Store
+npm-debug.log
+node_modules/
+.build/
+yarn-error.log
+*.php
