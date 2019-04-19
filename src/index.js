@@ -8,8 +8,8 @@
  *   });
  *
  */
-const getZipCode = function (country, zip, callback) {
-    var keys = {
+const getZipCode = (c, zip, callback) => {
+    let keys = {
             AD: 0,
             AR: 2,
             AS: 0,
@@ -138,21 +138,21 @@ const getZipCode = function (country, zip, callback) {
             'accuracy'
         ],
         pattern = null,
-        country = country && country.toLocaleUpperCase();
+        country = c && c.toLocaleUpperCase();
 
     // Check patterns.
     if (typeof patterns[country] !== 'undefined') {
         pattern = patterns[country];
     }
     else {
-        for (var k in patterns) {
+        for (let k in patterns) {
             if (patterns.hasOwnProperty(k) && k.indexOf(country) > 0) {
                 pattern = patterns[k];
                 break;
             }
         }
     }
-    var result = {
+    let result = {
         input: {
             country: country,
             zip: zip
@@ -173,7 +173,7 @@ const getZipCode = function (country, zip, callback) {
             }
             window.zipCodesCallback = function (zipCodes) {
                 if (typeof zipCodes[zip] !== 'undefined') {
-                    for (var i = 0, len = headers.length; i < len; i++) {
+                    for (let i = 0, len = headers.length; i < len; i++) {
                         result.lookup[headers[i]] = zipCodes[zip][i];
                     }
                     result.validLookup = true;
@@ -181,7 +181,7 @@ const getZipCode = function (country, zip, callback) {
                 }
                 callback(result);
             };
-            var k = keys[country] > 0 ? zip.toUpperCase().replace(/[^0-9A-Z]/g, '').substr(0, keys[country]) : 0,
+            let k = keys[country] > 0 ? zip.toUpperCase().replace(/[^0-9A-Z]/g, '').substr(0, keys[country]) : 0,
                 script = document.createElement('script');
             script.src = 'https://' + country + '.zipcodes.gdn/min/' + k + '.jsonp';
             document.body.appendChild(script);
