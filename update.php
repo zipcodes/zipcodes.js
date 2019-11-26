@@ -5,12 +5,12 @@
 error_reporting(E_ALL);
 ini_set('display_errors', '1');
 
-$cwd = dirname(realpath(__FILE__));
-$zipfile = $cwd.'/allCountries.zip';
-$txtfile = $cwd.'/allCountries.txt';
+$cwd       = dirname(realpath(__FILE__));
+$zipfile   = $cwd.'/allCountries.zip';
+$txtfile   = $cwd.'/allCountries.txt';
 $statsOnly = false;
-$regenKey = false;
-$keyArr = $regenKey ? [] : json_decode(file_get_contents($cwd.'/key.json'), true);
+$regenKey  = false;
+$keyArr    = $regenKey ? [] : json_decode(file_get_contents($cwd.'/key.json'), true);
 
 // Download http://download.geonames.org/export/zip/allCountries.zip
 if (!file_exists($txtfile)) {
@@ -37,7 +37,7 @@ if (!file_exists($txtfile)) {
 echo "Cleaning up from previous build...\n";
 clean($cwd);
 
-$row = 0;
+$row     = 0;
 $headers = [
     'countryCode', // iso country code, 2 characters
     'postalCode', // varchar(20)
@@ -52,15 +52,15 @@ $headers = [
     'longitude', // estimated longitude (wgs84)
     'accuracy', // accuracy of lat/lng from 1=estimated to 6=centroid
 ];
-$stats = [];
+$stats   = [];
 if (($handle = fopen($txtfile, 'r')) !== false) {
     while (($data = fgetcsv($handle, 1000, "\t")) !== false) {
         $place = new stdClass();
         foreach ($data as $key => $value) {
-            $keyname = $headers[$key];
+            $keyname           = $headers[$key];
             $place->{$keyname} = $value;
         }
-        if (!empty($place->countryCode) && !empty($place->postalCode)) {
+        if (!empty($place->countryCode) || !empty($place->postalCode)) {
             $countryCode = strtoupper($place->countryCode);
 
             if ($statsOnly) {
@@ -71,8 +71,8 @@ if (($handle = fopen($txtfile, 'r')) !== false) {
 
                 if (!isset($stats[$countryCode])) {
                     $stats[$countryCode] = [
-                        'count' => 1,
-                        'lowest' => $minCode,
+                        'count'   => 1,
+                        'lowest'  => $minCode,
                         'highest' => $minCode,
                     ];
                 } else {
@@ -86,14 +86,15 @@ if (($handle = fopen($txtfile, 'r')) !== false) {
                 continue;
             }
 
-            $minOnly = in_array($countryCode, ['JP', 'PT']);
+            $minCodeRounded = minPostalRounded($place->postalCode, $place->countryCode, $keyArr);
+            $minOnly        = in_array($countryCode, ['JP', 'PT']);
             echo 'Creating entry for '.$place->countryCode.' '.$place->postalCode.($minOnly ? ' (min only)' : '').' in index '.$minCodeRounded."\n";
             if (!is_dir($cwd.'/'.$countryCode)) {
                 mkdir($cwd.'/'.$countryCode);
             }
 
             if (!file_exists($cwd.'/'.$countryCode.'/test.jsonp')) {
-                $test = new stdClass();
+                $test          = new stdClass();
                 $test->success = true;
                 file_put_contents($cwd.'/'.$countryCode.'/test.jsonp', 'zipCodesTestCallback('.json_encode($test).');');
             }
@@ -108,13 +109,12 @@ if (($handle = fopen($txtfile, 'r')) !== false) {
                 mkdir($cwd.'/'.$countryCode.'/min');
             }
 
-            $minCodeRounded = minPostalRounded($place->postalCode, $place->countryCode, $keyArr);
             $codes = [];
             if (file_exists($cwd.'/'.$countryCode.'/min/'.$minCodeRounded.'.json')) {
                 $codes = json_decode(file_get_contents($cwd.'/'.$countryCode.'/min/'.$minCodeRounded.'.json'), true);
             }
             $codes[$place->postalCode] = $data;
-            $codesJSON = json_encode($codes);
+            $codesJSON                 = json_encode($codes);
             file_put_contents(
                 $cwd.'/'.$countryCode.'/min/'.$minCodeRounded.'.json',
                 $codesJSON
@@ -138,9 +138,9 @@ if ($regenKey) {
         $key[$country] = [];
         if ($stat['count'] > 100000) {
             $chars = 3;
-        } elseif($stat['count'] > 10000) {
+        } elseif ($stat['count'] > 10000) {
             $chars = 2;
-        } elseif($stat['count'] > 1000) {
+        } elseif ($stat['count'] > 1000) {
             $chars = 1;
         } else {
             $chars = 0;
@@ -161,8 +161,9 @@ if ($regenKey) {
 
 /**
  * Recursively delete files within a directory based on type.
+ *
  * @param $dir
- * @param array $types
+ * @param  array  $types
  */
 function clean($dir, $types = ['json', 'jsonp'])
 {
@@ -200,7 +201,7 @@ function minPostalRounded($postalCode, $country, $keyArr = [])
 {
     $result = 0;
 
-    if ($keyArr[$country] > 1) {
+    if (isset($keyArr[$country]) && $keyArr[$country] > 1) {
 
         // Only allow uppercase.
         $postalCode = strtoupper($postalCode);

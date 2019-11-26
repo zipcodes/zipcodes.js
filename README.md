@@ -12,7 +12,7 @@ Free postal code validation for the web.
 
 ## Usage
 
-`<script src="https://cdn.jsdelivr.net/gh/zipcodes/zipcodes.js@1.0/zipcodes.min.js"></script>`
+`<script src="https://cdn.jsdelivr.net/gh/zipcodes/zipcodes.js@1/zipcodes.min.js"></script>`
 
 ```
 getZipCode('US', '90210', function (result) {
@@ -70,7 +70,7 @@ Country codes should follow [ISO 3166-1 alpha-2](https://en.wikipedia.org/wiki/I
 | <img src="https://flags.zipcodes.gdn/png/256/AU.png" height="12" width="23"> | AU   | Australia                                    | ✓     | ✓      |
 | <img src="https://flags.zipcodes.gdn/png/256/AW.png" height="12" width="23"> | AW   | Aruba                                        | ✖     | ✖      |
 | <img src="https://flags.zipcodes.gdn/png/256/AX.png" height="12" width="23"> | AX   | sort                                         | ✖     | ✓      |
-| <img src="https://flags.zipcodes.gdn/png/256/AZ.png" height="12" width="23"> | AZ   | Azerbaijan                                   | ✓     | ✖      |
+| <img src="https://flags.zipcodes.gdn/png/256/AZ.png" height="12" width="23"> | AZ   | Azerbaijan                                   | ✓     | ✓      |
 | <img src="https://flags.zipcodes.gdn/png/256/BA.png" height="12" width="23"> | BA   | Bosnia and Herzegovina                       | ✓     | ✖      |
 | <img src="https://flags.zipcodes.gdn/png/256/BB.png" height="12" width="23"> | BB   | Barbados                                     | ✖     | ✖      |
 | <img src="https://flags.zipcodes.gdn/png/256/BD.png" height="12" width="23"> | BD   | Bangladesh                                   | ✓     | ✓      |
@@ -176,7 +176,7 @@ Country codes should follow [ISO 3166-1 alpha-2](https://en.wikipedia.org/wiki/I
 | <img src="https://flags.zipcodes.gdn/png/256/KM.png" height="12" width="23"> | KM   | Comoros                                      | ✖     | ✖      |
 | <img src="https://flags.zipcodes.gdn/png/256/KN.png" height="12" width="23"> | KN   | Saint Kitts and Nevis                        | ✖     | ✖      |
 | <img src="https://flags.zipcodes.gdn/png/256/KP.png" height="12" width="23"> | KP   | North Korea                                  | ✖     | ✖      |
-| <img src="https://flags.zipcodes.gdn/png/256/KR.png" height="12" width="23"> | KR   | South Korea                                  | ✓     | ✖      |
+| <img src="https://flags.zipcodes.gdn/png/256/KR.png" height="12" width="23"> | KR   | South Korea                                  | ✓     | ✓      |
 | <img src="https://flags.zipcodes.gdn/png/256/KW.png" height="12" width="23"> | KW   | Kuwait                                       | ✓     | ✖      |
 | <img src="https://flags.zipcodes.gdn/png/256/KY.png" height="12" width="23"> | KY   | Cayman Islands                               | ✖     | ✖      |
 | <img src="https://flags.zipcodes.gdn/png/256/KZ.png" height="12" width="23"> | KZ   | Kazakhstan                                   | ✓     | ✖      |
@@ -252,7 +252,7 @@ Country codes should follow [ISO 3166-1 alpha-2](https://en.wikipedia.org/wiki/I
 | <img src="https://flags.zipcodes.gdn/png/256/SC.png" height="12" width="23"> | SC   | Seychelles                                   | ✖     | ✖      |
 | <img src="https://flags.zipcodes.gdn/png/256/SD.png" height="12" width="23"> | SD   | Sudan                                        | ✓     | ✖      |
 | <img src="https://flags.zipcodes.gdn/png/256/SE.png" height="12" width="23"> | SE   | Sweden                                       | ✓     | ✓      |
-| <img src="https://flags.zipcodes.gdn/png/256/SG.png" height="12" width="23"> | SG   | Singapore                                    | ✓     | ✖      |
+| <img src="https://flags.zipcodes.gdn/png/256/SG.png" height="12" width="23"> | SG   | Singapore                                    | ✓     | ✓      |
 | <img src="https://flags.zipcodes.gdn/png/256/SH.png" height="12" width="23"> | SH   | Saint Helena, Ascension and Tristan da Cunha | ✖     | ✖      |
 | <img src="https://flags.zipcodes.gdn/png/256/SI.png" height="12" width="23"> | SI   | Slovenia                                     | ✓     | ✓      |
 | <img src="https://flags.zipcodes.gdn/png/256/SJ.png" height="12" width="23"> | SJ   | Svalbard and Jan Mayen                       | ✖     | ✓      |
