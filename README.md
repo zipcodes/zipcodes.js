@@ -127,7 +127,7 @@ Country codes should follow [ISO 3166-1 alpha-2](https://en.wikipedia.org/wiki/I
 | <img src="https://flags.zipcodes.gdn/png/256/FI.png" height="12" width="23"> | FI   | Finland                                      | ✓     | ✓      |
 | <img src="https://flags.zipcodes.gdn/png/256/FJ.png" height="12" width="23"> | FJ   | Fiji                                         | ✖     | ✖      |
 | <img src="https://flags.zipcodes.gdn/png/256/FK.png" height="12" width="23"> | FK   | Falkland Islands                             | ✖     | ✖      |
-| <img src="https://flags.zipcodes.gdn/png/256/FM.png" height="12" width="23"> | FM   | Federated States of Micronesia               | ✓     | ✖      |
+| <img src="https://flags.zipcodes.gdn/png/256/FM.png" height="12" width="23"> | FM   | Federated States of Micronesia               | ✓     | ✓      |
 | <img src="https://flags.zipcodes.gdn/png/256/FO.png" height="12" width="23"> | FO   | Faroe Islands                                | ✓     | ✓      |
 | <img src="https://flags.zipcodes.gdn/png/256/FR.png" height="12" width="23"> | FR   | France                                       | ✓     | ✓      |
 | <img src="https://flags.zipcodes.gdn/png/256/GA.png" height="12" width="23"> | GA   | Gabon                                        | ✖     | ✖      |
@@ -239,7 +239,7 @@ Country codes should follow [ISO 3166-1 alpha-2](https://en.wikipedia.org/wiki/I
 | <img src="https://flags.zipcodes.gdn/png/256/PR.png" height="12" width="23"> | PR   | Puerto Rico                                  | ✓     | ✓      |
 | <img src="https://flags.zipcodes.gdn/png/256/PS.png" height="12" width="23"> | PS   | State of Palestine                           | ✓     | ✖      |
 | <img src="https://flags.zipcodes.gdn/png/256/PT.png" height="12" width="23"> | PT   | Portugal                                     | ✓     | ✓      |
-| <img src="https://flags.zipcodes.gdn/png/256/PW.png" height="12" width="23"> | PW   | Palau                                        | ✓     | ✖      |
+| <img src="https://flags.zipcodes.gdn/png/256/PW.png" height="12" width="23"> | PW   | Palau                                        | ✓     | ✓      |
 | <img src="https://flags.zipcodes.gdn/png/256/PY.png" height="12" width="23"> | PY   | Paraguay                                     | ✖     | ✖      |
 | <img src="https://flags.zipcodes.gdn/png/256/QA.png" height="12" width="23"> | QA   | Qatar                                        | ✖     | ✖      |
 | <img src="https://flags.zipcodes.gdn/png/256/RE.png" height="12" width="23"> | RE   | Réunion                                      | ✓     | ✓      |
