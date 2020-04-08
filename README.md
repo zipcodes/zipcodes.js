@@ -12,9 +12,11 @@ Free postal code validation for the web.
 
 ## Usage
 
-`<script src="https://cdn.jsdelivr.net/gh/zipcodes/zipcodes.js@1/zipcodes.min.js"></script>`
-
+```html
+<script src="https://cdn.jsdelivr.net/gh/zipcodes/zipcodes.js@1/zipcodes.min.js"></script>
 ```
+
+```js
 getZipCode('US', '90210', function (result) {
     console.log(result);
 });
@@ -22,7 +24,7 @@ getZipCode('US', '90210', function (result) {
 
 Output:
 
-```
+```js
 {
     "input":{
         "country": "US",
