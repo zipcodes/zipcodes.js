@@ -244,7 +244,7 @@ Country codes should follow [ISO 3166-1 alpha-2](https://en.wikipedia.org/wiki/I
 | <img src="https://flags.zipcodes.gdn/png/256/QA.png" height="12" width="23"> | QA   | Qatar                                        | ✖     | ✖      |
 | <img src="https://flags.zipcodes.gdn/png/256/RE.png" height="12" width="23"> | RE   | Réunion                                      | ✓     | ✓      |
 | <img src="https://flags.zipcodes.gdn/png/256/RO.png" height="12" width="23"> | RO   | Romania                                      | ✓     | ✓      |
-| <img src="https://flags.zipcodes.gdn/png/256/RS.png" height="12" width="23"> | RS   | Serbia.                                      | ✓     | ✖      |
+| <img src="https://flags.zipcodes.gdn/png/256/RS.png" height="12" width="23"> | RS   | Serbia.                                      | ✓     | ✓      |
 | <img src="https://flags.zipcodes.gdn/png/256/RU.png" height="12" width="23"> | RU   | Russia                                       | ✓     | ✓      |
 | <img src="https://flags.zipcodes.gdn/png/256/RW.png" height="12" width="23"> | RW   | Rwanda                                       | ✖     | ✖      |
 | <img src="https://flags.zipcodes.gdn/png/256/SA.png" height="12" width="23"> | SA   | Saudi Arabia                                 | ✓     | ✖      |
